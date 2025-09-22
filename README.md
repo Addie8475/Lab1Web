@@ -36,3 +36,73 @@
 >**Halaman baru**
 : Dan ini adalah halaman baru yang telah dibuat dari halaman utama
 <img width="262" height="479" alt="Halaman Baru" src="https://github.com/user-attachments/assets/ba9f2dae-8f9f-4b99-9a17-7ca47accfc14" />
+
+# Pertanyaan
+1. Lakukan perubahan pada kode sesuai dengan keinginan anda, amati perubahannya adakah
+error ketika terjadi kesalahan penulisan tag?
+2. Apa perbedaan dari tag p dengan tag br, berikan penjelasannya!
+3. Apa perbedaan atribut title dan alt pada tag img, berikan penjelasannya!
+4. Untuk mengatur ukuran gambar, digunakan atribut width dan height. Agar tampilan gambar
+proporsional sebaiknya kedua atribut tersebut diisi semua atau tidak? Berikan penjelasannya!
+5. Pada link tambahkan atribut target dengan nilai atribut bervariasi ( _blank, _self, _top,
+_parent ), apa yang terjadi pada masing-masing nilai antribut tersebut?
+
+**Jawab**
+
+**1. Setelah saya ubah dan diamati lagi, tidak ada kesalahan satupun yang terjadi saat menjalankan web**
+**2. Tag p (Paragraph)**
+- Fungsinya untuk membuat paragraf baru.
+- Secara default, browser memberikan jarak atas dan bawah pada setiap paragraf.
+- Tag p adalah container/block element, artinya membungkus teks dalam sebuah blok.
+
+  Tag br (Line Break)
+- Fungsinya untuk membuat baris baru (pindah ke bawah), tanpa memulai paragraf baru.
+- Tag br tidak memiliki penutup (</br> tidak dipakai di HTML5).
+- Tag br adalah inline element, jadi hanya memecah baris di dalam teks.
+
+**3. Atribut alt (Alternative Text)**
+- Digunakan untuk memberikan teks alternatif jika gambar tidak bisa ditampilkan (karena error, koneksi lambat, atau aksesibilitas).
+- Sangat penting untuk SEO dan aksesibilitas (screen reader akan membaca teks alt untuk pengguna tunanetra).
+- Wajib digunakan pada tag img agar konten tetap bisa dimengerti meskipun gambar gagal dimuat.
+
+  Atribut title
+- Digunakan untuk memberikan informasi tambahan (tooltip) saat kursor diarahkan ke gambar.
+- Tidak muncul jika gambar gagal dimuat.
+- Bersifat opsional, hanya untuk memberi keterangan ekstra.
+
+**4. Tentang Atribut width dan height pada img**
+
+Fungsinya: mengatur ukuran tampilan gambar di halaman web (dalam pixel atau persentase).
+Agar gambar tetap proporsional (tidak gepeng/terdistorsi), sebaiknya JANGAN mengisi kedua atribut (width dan height) sekaligus secara manual.
+
+Kalau hanya mengisi salah satu (misalnya width saja)
+Browser akan otomatis menyesuaikan ukuran sisi lainnya (height) sesuai rasio asli gambar.
+Hasil: gambar tetap proporsional.
+
+Kalau mengisi width dan height sekaligus dengan nilai yang tidak sesuai rasio asli
+Gambar akan terlihat melebar atau memanjang (distorsi).
+Praktik modern (CSS lebih baik)
+
+Umumnya, ukuran gambar diatur dengan CSS agar lebih fleksibel (misalnya responsif di berbagai perangkat).
+
+**5. Nilai atribut target dan efeknya**
+
+_blank :
+
+Membuka link di tab/jendela baru.
+Paling sering dipakai kalau tidak ingin menutup halaman utama.
+
+_self (default) :
+
+Membuka link di halaman/tab yang sama.
+Kalau target tidak ditulis, maka otomatis dianggap _self.
+
+_top :
+
+Membuka link di jendela penuh (top-level window), menghapus semua frame.
+Berguna kalau halaman sedang berada dalam frameset/iframe, lalu ingin keluar ke halaman penuh.
+
+_parent :
+
+Membuka link di parent frame (satu tingkat di atas frame sekarang).
+Kalau tidak ada parent frame, sama saja dengan _self.
